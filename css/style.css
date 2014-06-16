@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+}
+
+/**Map page**/
+#map {
+height:100%;
+}
+
+.overlay {
+position: absolute;
+text-align: center;
+z-index: 5000;
+color: white;
+right:1px;
+background-color: rgba(51,51,50,0.9);
+margin: 10px;
+padding: 5px 5px 5px 5px;
+
+}
+
+.overlay h3{
+margin: 0px 3px 0px 3px;
+font-family: georgia;
+font-size: 15px;
+}
+
+.overlay hr{
+max-width: 50px;
+margin-top: 5px;
+margin-bottom: 5px;
+}

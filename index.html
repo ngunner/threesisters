@@ -1,0 +1,29 @@
+---
+layout: page
+---
+<div class="overlay">
+	<hr>
+	<h3>{{ site.title }}</h3>
+	<hr>
+</div><!-- overlay -->
+<div id="map"></div><!-- map -->
+
+<!-- Leaflet maps -->
+	<script src="{{ site.baseurl }}/plugins/leaflet/leaflet.js"></script>
+<!-- Leaflet Awesome icons -->
+	<script src="{{ site.baseurl }}/plugins/leaflet-awesome/leaflet.awesome-markers.min.js"></script>
+	
+<!-- map page settings -->
+	<script>
+	var map = new L.Map('map', {
+    center: new L.LatLng(42.407002, -79.236431),
+    zoom: 9,
+    layers: new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+});
+
+// Add markers from posts to map
+{% for post in site.posts limit: 10000 %}
+	var marker = L.marker([{{ post.latitude }}, {{ post.longitude }}],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>{{ post.title }}</h5>{{ post.content }}{% if post.produce %}<strong>Produce:</strong>{% for produce in post.produce %}<ul><li>{{ produce }}</li></ul>{% endfor %}{% endif %}');
+{% endfor %}
+	</script>

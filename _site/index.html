@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    
+    <meta name="author" content="Nicholas Gunner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <!-- Latest compiled and minified bootstrap CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Leaflet maps -->
+	<link rel="stylesheet" href="http://threesisters.us/plugins/leaflet/leaflet.css" />
+	
+	<!-- Leaflet Awesome icons -->
+	<link rel="stylesheet" href="http://threesisters.us/plugins/leaflet-awesome/leaflet.awesome-markers.css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="http://threesisters.us/css/style.css">
+  </head>
+
+  <body>
+    
+      <div class="overlay">
+	<hr>
+	<h3>Three Sisters</h3>
+	<hr>
+</div><!-- overlay -->
+<div id="map"></div><!-- map -->
+
+<!-- Leaflet maps -->
+	<script src="http://threesisters.us/plugins/leaflet/leaflet.js"></script>
+<!-- Leaflet Awesome icons -->
+	<script src="http://threesisters.us/plugins/leaflet-awesome/leaflet.awesome-markers.min.js"></script>
+	
+<!-- map page settings -->
+	<script>
+	var map = new L.Map('map', {
+    center: new L.LatLng(42.407002, -79.236431),
+    zoom: 9,
+    layers: new L.TileLayer('https://a.tiles.mapbox.com/v3/ngunner.hkcei69m/{z}/{x}/{y}.png')
+});
+
+// Add markers from posts to map
+
+	var marker = L.marker([42.467992, -79.252229],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>The Berry Bush</h5><p>Strawberries, Red and Black Raspberries, Blueberries, Currants, Blackberries</p>');
+
+	var marker = L.marker([42.430161, -79.330038],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Seybold Stand</h5><p>Produce</p>');
+
+	var marker = L.marker([42.465155, -79.362445],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Roberto Fred Farm</h5><p>Produce</p>');
+
+	var marker = L.marker([42.467960, -79.272492],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Richard Feinen Farm</h5><p>Produce</p>');
+
+	var marker = L.marker([42.444761, -79.147240],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Prospect for Blue</h5><p>Blueberries</p>');
+
+	var marker = L.marker([42.467992, -79.252229],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Militello Farms</h5><p>Strawberries, Raspberries, Blackberries, Blueberries, Tree Fruits</p>');
+
+	var marker = L.marker([42.467943, -79.263812],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Lembke Farm</h5><p>Certified Organic Concord Grapes, Produce</p>');
+
+	var marker = L.marker([42.436065, -79.114430],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Hanova Hill Farm</h5><p>Natural Beef</p>');
+
+	var marker = L.marker([42.537505, -78.983635],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>County Line Farm</h5><p>Produce</p>');
+
+	var marker = L.marker([42.441101, -79.328578],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Ceres Farm</h5><p>Raw Honey, Beeswax, Fruit Preserves</p>');
+
+	var marker = L.marker([42.460582, -79.186824],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Anne Wilmont Eggs</h5><p>Eggs</p>');
+
+	var marker = L.marker([42.479852, -79.160078],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Someday Maybe Farms</h5><p>Produce, Beef, Pork, Eggs, Maple Syrup, Honey, Plants, Locally Made Crafts</p>');
+
+	var marker = L.marker([42.340826, -79.292737],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Lapp Farm Dairy</h5><p>Raw Milk, Raw Milk Cheese, Yogurt, Cheese Curd</p>');
+
+	var marker = L.marker([42.427055, -79.377808],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>J.M. Joy Farms LLC</h5><p>Produce, Meats, Eggs, Jams, Jellies, Baked Goods, Small Quilted Items</p>');
+
+	var marker = L.marker([42.049984, -79.291424],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Busti Cider Mill & Farm Market</h5><p>Produce, Apple Cider, Fresh and Dried Flowers, Maple Syrup, Jams, Jellies, Apple Butter</p>');
+
+	var marker = L.marker([42.292888, -79.602942],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Toboggan Hill Farm</h5><p>Produce, Eggs, Goat Meat, Pork</p>');
+
+	var marker = L.marker([42.014930, -79.398633],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Small Meadows Farm</h5><p>Produce, Goat Meat, Pork, Goat Milk Soap, Chicken Eggs, Duck Eggs</p>');
+
+	var marker = L.marker([42.440023, -79.126700],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Roo Haven Farm</h5><p>Certified Organic Chicken, Turkey, Duck, Goose, Eggs, Produce, Berkshire Pork, Goat Meat.</p>');
+
+	var marker = L.marker([42.414222, -79.402235],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Lamberton Hollow Farm</h5><p>Produce, Herbs, Baked Goods, Jams, Jellies, Pet Rabbits</p>');
+
+	var marker = L.marker([42.099317, -79.555085],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Green Heron Growers</h5><p>100% Grass Fed Beef, Certified Organic Chicken, Shiitake Mushrooms, Produce</p>');
+
+	var marker = L.marker([42.424423, -79.288942],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Gong Garden</h5><p>Vegetables, Flowers</p>');
+
+	var marker = L.marker([42.470507, -79.131366],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>DeGoliers Maple Products</h5><p>Pure Maple Syrup, Granulated Maple Sugar, Maple Cream, Maple Vinegar</p>');
+
+	var marker = L.marker([42.588498, -79.039235],{icon: L.AwesomeMarkers.icon({icon: 'circle', markerColor: 'cadetblue', prefix: 'fa', iconColor: 'white'}) }).addTo(map);
+	marker.bindPopup('<h5>Castle Farms</h5><p>Pasteurized Goat Milk, Goat Cheeses, Goat Yogurt, Goat Fudge, Soaps, Lotion, Pappardelle’s Pasta.</p>');
+
+	</script>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<!-- FitVids Pluggin -->
+	<script src="http://threesisters.us/plugins/fitvids/jquery.fitvids.js"></script>
+	<!-- Fitvids script -->
+	<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".fitvid").fitVids();
+  });
+	</script>
+	<!-- smooth scroll -->
+	<script>
+	$(function() {
+  $('a[href=#siteauthor]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+	</script>
+  </body>
+</html>
